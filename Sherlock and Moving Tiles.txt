@@ -1,0 +1,13 @@
+import sys
+import math
+
+x = input()
+xp = x.split(" ")
+L = int(xp[0])
+S1 = int(xp[1])
+S2 = int(xp[2])
+Q = int(input())
+for i in range(Q) :
+    qi = int(input())
+    t = (math.sqrt(2)*((L - math.sqrt(qi)) / math.fabs(S1 - S2)))
+    print(t)
