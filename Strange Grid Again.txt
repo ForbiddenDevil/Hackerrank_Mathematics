@@ -1,0 +1,7 @@
+x = input().split(" ")
+r = int(x[0])
+c = int(x[1])
+if r % 2 == 0 :
+    print((2*c - 1) + (10 * ((r - 1) // 2)))
+else :
+    print((2*c - 2) + (10 * ((r - 1)// 2)))
