@@ -1,0 +1,14 @@
+import math
+
+q = int(input())
+prime = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101]
+for i in range(q) :
+    n = int(input())
+    count = 0
+    mul = 1
+    for k in prime :
+        mul *= k
+        count += 1
+        if mul > n :
+            break
+    print(count - 1)
