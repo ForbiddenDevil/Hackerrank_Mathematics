@@ -1,0 +1,7 @@
+for _ in range(int(input())):
+    n = int(input())
+    arr = list(map(int, input().strip().split(" ")))
+    ans = 1
+    for i in arr:
+        ans *= i
+    print(ans % 1234567)
