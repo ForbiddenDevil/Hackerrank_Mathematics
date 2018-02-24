@@ -1,0 +1,6 @@
+import fractions
+n = int(input())
+for i in range(n):
+    l, b = map(int, input().strip().split(" "))
+    i = fractions.gcd(l, b)
+    print((l*b)//(i*i))
