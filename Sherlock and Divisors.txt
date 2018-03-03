@@ -1,0 +1,19 @@
+def factors(n):
+    y = []
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:
+            y.append(i)
+            y.append(n//i)
+    return set(y)
+
+n = int(input())
+for i in range(n):
+    x = int(input())
+    count = 0
+    for j in factors(x):
+        if j % 2 == 0:
+            count += 1
+    #if x % 2 == 0:
+        #count += 1
+    #print(factors(x))
+    print(count)
