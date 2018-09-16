@@ -1,0 +1,51 @@
+#!/bin/python3
+
+import os
+import sys
+
+def prime_factors(n):
+    i = 2
+    factors = []
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+            factors.append(i)
+    if n > 1:
+        factors.append(n)
+    print(factors)
+    return factors
+
+def sum_digits(n):
+    ans = 0
+    while n:
+        ans += n%10
+        n = n//10
+    return(ans)
+
+# Complete the solve function below.
+def solve(n):
+    f = prime_factors(n)
+    a1 = 0
+    for i in f:
+        a1 += sum_digits(i)
+    a2 = 0
+    while n:
+        a2 += n%10
+        n = n//10
+    if a1 == a2:
+        return(1)
+    else:
+        return(0)
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    result = solve(n)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
